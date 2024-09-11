@@ -1,5 +1,3 @@
 # Avionics_RPi
 
-'''
-sudo reboot
-'''
+'''sudo reboot'''
