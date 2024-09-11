@@ -1,6 +1,6 @@
 # Avionics_RPi
 
-##GIT 사용법
+## GIT 사용법
 ### 0) 알면 도움되는 명령어
 
 ```bash
