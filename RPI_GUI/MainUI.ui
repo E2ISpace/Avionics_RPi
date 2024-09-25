@@ -17,35 +17,65 @@
    <widget class="QPushButton" name="ResetButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>660</y>
+      <x>20</x>
+      <y>680</y>
       <width>111</width>
       <height>61</height>
      </rect>
     </property>
+    <property name="whatsThis">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(30, 31, 50)
+     <string notr="true">
 </string>
     </property>
     <property name="text">
      <string>RESET</string>
     </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/Reset.png</normaloff>img/Reset.png</iconset>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="EmergencyParachuteButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>660</y>
+      <x>140</x>
+      <y>680</y>
       <width>111</width>
       <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(30, 31, 50)
+     <string notr="true">
 </string>
     </property>
     <property name="text">
      <string>Emergency</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/Emergency_Parachute.png</normaloff>img/Emergency_Parachute.png</iconset>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>710</y>
+      <width>391</width>
+      <height>21</height>
+     </rect>
     </property>
    </widget>
   </widget>
@@ -61,6 +91,28 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="img/Reset.png"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ResetButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ResetStart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>701</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>71</x>
+     <y>669</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ResetStart()</slot>
+ </slots>
 </ui>
