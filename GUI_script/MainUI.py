@@ -7,6 +7,7 @@ from PyQt5 import uic
 
 
 form_class, base_class = uic.loadUiType("/home/E2I/E2I_WorkSpace/Avionics_RPI/RPI_GUI/MainUI.ui")
+# self.serial_port = serial.Serial('/dev/ttyACM0', 960, timeout=1)
 
 class WindowClass(QMainWindow, form_class):
 
