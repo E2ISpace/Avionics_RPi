@@ -24,16 +24,6 @@ class WindowClass(QMainWindow, form_class):
         self.timer.timeout.connect(self.read_serial)
         self.timer.start(1000)  # 1 second interval
 
-    def ResetStart(self):
-        self.textEdit.append("RESET")
-        ResetCode = "RESET"
-        # Check if the serial port is open and send the reset code
-        if self.serial_port and self.serial_port.is_open:
-            self.serial_port.write(ResetCode.encode())
-            print(f"Sent message: {ResetCode}")
-        else:
-            print("Serial port is not open")
-
     def read_serial(self):
         # Check if the serial port is available and open
         if self.serial_port and self.serial_port.is_open:
